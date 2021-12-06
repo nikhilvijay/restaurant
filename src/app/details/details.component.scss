@@ -1,18 +1,4 @@
-.cart{
-    float: right;
-    margin-right: 22px;
-}
-.back{
-    margin-left: 22px;
-}
-.cart, .back{
-    cursor: pointer;
-    &:hover{
-        opacity: .7;
-    }
-}
-.topSection {
-    margin-top: 20px;
+.topSection {    
     padding: 20px 20px 50px 20px;
     display: block;
     h3 {

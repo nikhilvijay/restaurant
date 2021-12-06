@@ -1,0 +1,41 @@
+.cart, .location, .filter, .search{
+    float: right;
+    margin-right: 22px;
+}
+.location{
+    margin-top: 10px;
+}
+.back{
+    margin-left: 22px;
+    margin-bottom: 20px;
+}
+.cart, .back, .filter, .location{
+    cursor: pointer;
+    &:hover{
+        opacity: .7;
+    }
+}
+.search{
+    background: #F7F7F7;
+    width: 338px;
+    height: 50px;
+    position: relative;
+    padding-left: 34px;
+
+    input{
+        outline: none;
+        height: 44px;
+        width: 100%;
+        background: #F7F7F7;
+        border:none;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    img{        
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}

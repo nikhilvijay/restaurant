@@ -19,8 +19,4 @@ export class DetailsComponent implements OnInit {
     //this.restaurant.getMenu().subscribe(res=>this.menuData = res);
     this.restaurant.getMenu().subscribe(res=>this.menuData = res);
   }
-
-  goBack(){alert();
-    history.back();
-  }
 }

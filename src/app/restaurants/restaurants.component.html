@@ -1,7 +1,3 @@
-<div>
-    <img src="./assets/images/arrow.png" alt="">
-    <img src="./assets/images/cart.png" alt="">
-</div>
 <div class="outer">
     <h3>Category</h3>
     <div>
@@ -30,12 +26,15 @@
     </div>
     <h3>Restaurants</h3>
     <ng-container *ngFor="let restorant of restorantsCollection.allRestaurants">
-        <div *ngIf="restorant.restaurantCategory.includes(selectedCategory)" class="restorant" (click)="navigate(restorant.id)">
-            <img [src]="restorant.restaurantImage" [alt]="restorant.restaurantName" width="100%">
-            <h1>{{restorant.restaurantName}}</h1>
-            <img src="./assets/images/{{restorant.isOpen? 'open.png' : 'close.png'}}"
-                alt="{{restorant.isOpen? 'Open' : 'Close'}}">
-            <p>{{restorant.restaurantDescription}}</p>
-        </div>
+        <ng-container *ngIf="restorant.restaurantName.toLowerCase().includes(searchTag.toLowerCase())">
+            <div *ngIf="restorant.restaurantCategory.includes(selectedCategory)" class="restorant"
+                (click)="navigate(restorant.id)">
+                <img [src]="restorant.restaurantImage" [alt]="restorant.restaurantName" width="100%">
+                <h1>{{restorant.restaurantName}}</h1>
+                <img src="./assets/images/{{restorant.isOpen? 'open.png' : 'close.png'}}"
+                    alt="{{restorant.isOpen? 'Open' : 'Close'}}">
+                <p>{{restorant.restaurantDescription}}</p>
+            </div>
+        </ng-container>
     </ng-container>
 </div>

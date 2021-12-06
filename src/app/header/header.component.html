@@ -1,1 +1,10 @@
-<p>header works!</p>
+<div>
+    <img class="back" src="./assets/images/arrow.png" alt="Home" (click)="goBack()">
+    <img class="cart" src="./assets/images/cart.png" alt="cart">
+    <img class="cart" src="./assets/images/filter.png" alt="filter">
+    <div class="search">
+        <img src="./assets/images/search.png">
+        <input type="text" placeholder="Search for Restaurants  (Press Enter to search)" [(ngModel)]="searchTag" (keyup)="search()"/>
+    </div>
+    <img src="./assets/images/Location.svg" class="location">
+</div>
