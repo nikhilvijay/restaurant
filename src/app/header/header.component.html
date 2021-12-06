@@ -1,7 +1,7 @@
 <div>
     <img class="back" src="./assets/images/arrow.png" alt="Home" (click)="goBack()">
     <img class="cart" src="./assets/images/cart.png" alt="cart">
-    <img class="cart" src="./assets/images/filter.png" alt="filter">
+    <img class="filter" src="./assets/images/filter.png" alt="filter"  (click)="showFilter()">
     <div class="search">
         <img src="./assets/images/search.png">
         <input type="text" placeholder="Search for Restaurants  (Press Enter to search)" [(ngModel)]="searchTag" (keyup)="search()"/>

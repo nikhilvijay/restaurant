@@ -26,7 +26,8 @@
     </div>
     <h3>Restaurants</h3>
     <ng-container *ngFor="let restorant of restorantsCollection.allRestaurants">
-        <ng-container *ngIf="restorant.restaurantName.toLowerCase().includes(searchTag.toLowerCase())">
+        <ng-container *ngIf="restorant.restaurantCuisine.toLowerCase().includes(filter.toLowerCase())">
+            <ng-container *ngIf="restorant.restaurantName.toLowerCase().includes(searchTag.toLowerCase())">
             <div *ngIf="restorant.restaurantCategory.includes(selectedCategory)" class="restorant"
                 (click)="navigate(restorant.id)">
                 <img [src]="restorant.restaurantImage" [alt]="restorant.restaurantName" width="100%">
@@ -36,5 +37,6 @@
                 <p>{{restorant.restaurantDescription}}</p>
             </div>
         </ng-container>
+    </ng-container>
     </ng-container>
 </div>

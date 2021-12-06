@@ -1,0 +1,22 @@
+<div class="filterArea">
+    <h3>Search Filter</h3>
+    <img src="./assets/images/closeFilter.png" alt="Close" (click)="closeFilter()" class="closeFilter">
+    <h3>Sort By</h3>
+    <div class="fireArea">
+        <img src="./assets/images/fire.png" class="fire">
+        <span>Open</span>
+    </div>
+    <h3>Cuisine</h3>
+    <div class="Cuisine">
+        <span (click)="changeFilter('All')" [className]="filter=='All'?'active':''">All</span>
+        <span (click)="changeFilter('Fast Food')" [className]="filter=='Fast Food'?'active':''">Fast Food</span>
+        <span (click)="changeFilter('American Food')" [className]="filter=='American Food'?'active':''">American Food</span>
+        <span (click)="changeFilter('Piza')" [className]="filter=='Piza'?'active':''">Piza</span>
+        <span (click)="changeFilter('Asian')" [className]="filter=='Asian'?'active':''">Asian</span>
+        <span (click)="changeFilter('Dessert')" [className]="filter=='Dessert'?'active':''">Dessert</span>
+        <span (click)="changeFilter('Mexician')" [className]="filter=='Mexician'?'active':''">Mexician</span>
+        <span (click)="changeFilter('BreakFast')" [className]="filter=='BreakFast'?'active':''">BreakFast</span>
+    </div>
+    <button (click)="submit()">Apply Filter</button>
+</div>
+<div class="adjust"></div>

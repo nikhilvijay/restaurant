@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { DetailsComponent } from './details/details.component';
 import { SplitPipe } from './split.pipe';
 import { FormsModule } from '@angular/forms';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     HeaderComponent,
     DetailsComponent,
-    SplitPipe
+    SplitPipe,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

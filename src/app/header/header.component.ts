@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilterService } from '../filter.service';
 import { SearchService } from '../search.service'
 
 @Component({
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   searchTag:string = '';
 
-  constructor(private searchService:SearchService) { }
+  constructor(private searchService:SearchService, private filterService:FilterService) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +22,9 @@ export class HeaderComponent implements OnInit {
 
   search(){
     this.searchService.search(this.searchTag);
+  }
+
+  showFilter(){
+    this.filterService.closeFilter(true);
   }
 }
