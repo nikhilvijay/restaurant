@@ -1,0 +1,99 @@
+.cart{
+    float: right;
+    margin-right: 22px;
+}
+.back{
+    margin-left: 22px;
+}
+.cart, .back{
+    cursor: pointer;
+    &:hover{
+        opacity: .7;
+    }
+}
+.topSection {
+    margin-top: 20px;
+    padding: 20px 20px 50px 20px;
+    display: block;
+    h3 {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 40px;
+        color: #182135;
+        margin: 0;
+        padding: 0;
+    }
+    img.resImage {
+        height: 296px;
+        width: 559px;
+        left: 849px;
+        top: 128px;
+        border-radius: 16px;
+        float: right;
+    }
+    p {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #626264;
+    }
+    span {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #626264;
+        display: block;
+        margin-top: 20px;
+        img {
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 20px;
+        }
+        b {
+            display: inline-block;
+            vertical-align: middle;
+            width: 231px;
+            font-weight: 400;
+        }
+    }
+}
+
+.menu {
+    padding: 20px 20px 50px 20px;
+
+    .menuItem {
+        width: calc(100% / 3);
+        padding: 10px;
+        display: inline-block;
+        box-sizing: border-box;
+        img {
+            width: 100%;
+            height: 150px;
+            border-radius: 16px;
+        }
+        span:nth-child(2) {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: #182135;
+        }
+        span:nth-child(3) {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: right;
+            color: #503E9D;
+            float: right;
+        }
+    }
+}

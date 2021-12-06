@@ -1,0 +1,36 @@
+<div>
+    <img class="back" src="./assets/images/arrow.png" alt="Home" (click)="goBack()">
+    <img class="cart" src="./assets/images/cart.png" alt="cart">
+</div>
+<div class="topSection">
+    <img [src]="details.restaurantDetail.restaurantImage" class="resImage" />
+    <h3>{{details.restaurantDetail.restaurantName}}</h3>
+    <p>{{details.restaurantDetail.restaurantDescription}}</p>
+    <span>
+        <img src="./assets/images/clock.png" />
+        <b>{{details.restaurantDetail.openingHours}}</b>
+    </span>
+    <span>
+        <img src="./assets/images/phone.png" />
+        <b>{{details.restaurantDetail.contactNumber}}</b>
+    </span>
+    <span>
+        <img src="./assets/images/globe.png" />
+        <b>{{details.restaurantDetail.websiteUrl}}</b>
+    </span>
+</div>
+
+<div>
+
+</div>
+
+<div class="menu">
+    <h3>Menu</h3>
+    <ng-container *ngFor="let menu of menuData.menu">
+        <div *ngIf="menu.restaurantName.includes(details.restaurantDetail.restaurantName)" class="menuItem">
+            <img [src]="menu.itemPhoto" />
+            <span>{{menu.itemName}}</span>
+            <span>&#163;{{menu.itemCost}}</span>
+        </div>
+    </ng-container>
+</div>

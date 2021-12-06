@@ -1,0 +1,118 @@
+.outer{
+    padding: 10px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+h3{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #182135;
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+}
+.categoryList{
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+
+    li{
+        display: inline-block;
+        margin-right: 50px;
+        box-sizing: border-box;
+        border-bottom: 3px solid #fff;
+        padding-bottom: 3px;
+
+        img{
+            margin-right: 10px;
+            vertical-align: middle;
+            background: #F7F7F7;
+            padding: 5px;
+            border-radius: 12px;
+        }
+
+        &:hover{
+            border-bottom: 3px solid hsl(251deg 43% 43% / 39%);
+        }
+
+        &.active{
+            border-bottom: 3px solid hsl(251deg 43% 43% / 100%);
+        }
+    }
+}
+
+.restorant{
+    width: calc(100% / 3 - 10px);
+    //background-color: red;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 5px;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+
+    > p {
+        display: -webkit-box;
+        text-align: justify;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        color: #000000;
+    }
+
+    &:hover img{
+        filter: brightness(0.6) grayscale(0.5) hue-rotate(135deg) saturate(0.6) sepia(0.09);
+        transition : -webkit-filter 250ms linear;
+        -webkit-transition : -webkit-filter 250ms linear;
+        -moz-transition : -webkit-filter 250ms linear;
+    }
+
+    > img:first-child {
+        border-radius: 16px;
+        object-fit: cover;
+        height: 176px;
+        transition : -webkit-filter 250ms linear;
+        -webkit-transition : -webkit-filter 250ms linear;
+        -moz-transition : -webkit-filter 250ms linear;
+    }
+
+    > img:nth-child(3){
+        background: rgba(80, 62, 157, 0.1);
+        padding: 4px 8px;
+        position: absolute;
+        right: 0;
+        top: 184px;
+    }
+
+    h1{
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: #182135;
+    }
+}

@@ -1,0 +1,41 @@
+<div>
+    <img src="./assets/images/arrow.png" alt="">
+    <img src="./assets/images/cart.png" alt="">
+</div>
+<div class="outer">
+    <h3>Category</h3>
+    <div>
+        <ul class="categoryList">
+            <li [className]="selectedCategory == 'Backed' ? 'active' : ''" (click)="changeCategory('Backed')">
+                <img src="./assets/images/backed.png" alt="">
+                <span>Backed</span>
+            </li>
+            <li [className]="selectedCategory == 'Sweet' ? 'active' : ''" (click)="changeCategory('Sweet')">
+                <img src="./assets/images/sweet.png" alt="">
+                <span>Sweet</span>
+            </li>
+            <li [className]="selectedCategory == 'Hot Dish' ? 'active' : ''" (click)="changeCategory('Hot Dish')">
+                <img src="./assets/images/hot.png" alt="">
+                <span>Hot Dish</span>
+            </li>
+            <li [className]="selectedCategory == 'Fast Food' ? 'active' : ''" (click)="changeCategory('Fast Food')">
+                <img src="./assets/images/fastfood.png" alt="">
+                <span>Fast Food</span>
+            </li>
+            <li [className]="selectedCategory == 'Salad' ? 'active' : ''" (click)="changeCategory('Salad')">
+                <img src="./assets/images/salad.png" alt="">
+                <span>Salad</span>
+            </li>
+        </ul>
+    </div>
+    <h3>Restaurants</h3>
+    <ng-container *ngFor="let restorant of restorantsCollection.allRestaurants">
+        <div *ngIf="restorant.restaurantCategory.includes(selectedCategory)" class="restorant" (click)="navigate(restorant.id)">
+            <img [src]="restorant.restaurantImage" [alt]="restorant.restaurantName" width="100%">
+            <h1>{{restorant.restaurantName}}</h1>
+            <img src="./assets/images/{{restorant.isOpen? 'open.png' : 'close.png'}}"
+                alt="{{restorant.isOpen? 'Open' : 'Close'}}">
+            <p>{{restorant.restaurantDescription}}</p>
+        </div>
+    </ng-container>
+</div>

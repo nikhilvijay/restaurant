@@ -1,0 +1,7 @@
+.menu, .content{
+    display: inline-block;
+}
+.content{
+    width: calc(100% - 304px);
+    margin-left: 304px;
+}
